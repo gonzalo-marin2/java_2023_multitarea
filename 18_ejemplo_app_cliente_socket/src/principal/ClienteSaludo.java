@@ -20,10 +20,11 @@ public class ClienteSaludo {
 
 	public static void main(String[] args) throws IOException {
 		//creamos objeto socket
-		try(Socket socket=new Socket("a13e100",8000);
+		//try(Socket socket=new Socket("a13e100",8000);//dirección de red del ordenador del profesor
+		try(Socket socket=new Socket("localhost",8000);
 		//****ENTRADA/SALIDA****
-		InputStream input=socket.getInputStream();
-		PrintStream out=new PrintStream(socket.getOutputStream());
+		InputStream input=socket.getInputStream();//flujo de entrada
+		PrintStream out=new PrintStream(socket.getOutputStream());//flujo de salida
 		//para leer el mensaje, creamos un bufferedreader
 		BufferedReader bf=new BufferedReader(new InputStreamReader(input));)
 		{
