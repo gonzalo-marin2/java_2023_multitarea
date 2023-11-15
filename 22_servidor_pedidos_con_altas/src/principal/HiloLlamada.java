@@ -51,8 +51,8 @@ public class HiloLlamada implements Runnable {
 
 	}
 	//este método transforma la lista de pedidos en una cadena JSON
-	//para lo cual, tiene que definir un serializador que indique como transformar
-	//LocalDate a String
+		//para lo cual, tiene que definir un serializador que indique como transformar
+		//LocalDate a String
 		private String serializarLista(List<Pedido> pedidos) {
 			final Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new JsonSerializer<LocalDate>() {@Override
 				public JsonElement serialize(LocalDate src, Type typeOfSrc, JsonSerializationContext context) {
